@@ -1,13 +1,15 @@
 <ion-slides autoplay="false" loop="false" pager="true" paginationType="progress">
 
-    <ion-slide class="mobility-slide">
-        <h3 class="question">¿La masa se mueve o esta fija?</h3>
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>¿La masa se mueve o esta fija?</h3>
         <button ion-button (click)="nextQuestion(true, 0);">Se mueve</button>
         <button ion-button (click)="nextQuestion(false, 0);">Esta fija</button>
     </ion-slide>
 
-    <ion-slide class="pain-slide">
-        <h3 class="question">¿Cuanto dolor sientes?</h3>
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>¿Cuanto dolor sientes?</h3>
         <ion-item>
             <ion-range min="0" max="10" step="1" snaps="true" pin="true" [(ngModel)]="painQuestionAnswer">
                 <ion-icon range-left small name="md-happy"></ion-icon>
@@ -18,28 +20,32 @@
         <button ion-button (click)="nextQuestion(null, 1);">Siguiente</button>
     </ion-slide>
 
-    <ion-slide class="temperature-slide">
-        <h3 class="question">¿La zona en donde sientes la masa tiene una temperatura diferente?</h3>
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>¿La zona en donde sientes la masa tiene una temperatura diferente?</h3>
         <button ion-button (click)="nextQuestion(true, 2);">Si</button>
         <button ion-button (click)="nextQuestion(false, 2);">No</button>
     </ion-slide>
 
-    <ion-slide class="color-slide">
-        <h3 class="question">¿Tienes algún cambio en la coloración de la piel de tus senos?</h3>
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>¿Tienes algún cambio en la coloración de la piel de tus senos?</h3>
         <button ion-button (click)="nextQuestion(true, 3);">Si</button>
         <button ion-button (click)="nextQuestion(false, 3);">No</button>
     </ion-slide>
 
-    <ion-slide class="secretion-slide">
-        <h3 class="question">¿Tu pecho secreta algún fluido?</h3>
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>¿Tu pecho secreta algún fluido?</h3>
         <button ion-button (click)="nextQuestion('red', 4);">Rojo</button>
         <button ion-button (click)="nextQuestion('transparent', 4);">Transparente</button>
         <button ion-button (click)="nextQuestion('white', 4);">Blanco</button>
         <button ion-button (click)="nextQuestion('no', 4);">No</button>
     </ion-slide>
 
-    <ion-slide class="deformity-slide">
-        <h3 class="question">¿Sientes alguna deformidad en tu seno?</h3>
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>¿Sientes alguna deformidad en tu seno?</h3>
         <button ion-button (click)="nextQuestion(true, 5);">Si</button>
         <button ion-button (click)="nextQuestion(false, 5);">No</button>
     </ion-slide>
