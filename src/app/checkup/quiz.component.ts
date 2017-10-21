@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Slides } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { Slides }        from 'ionic-angular';
 
 @Component({
   selector: 'quiz',
@@ -17,7 +18,7 @@ export class QuizComponent {
   secretionQuestionAnswer: string    = 'no'; // [red,white,transparent]
   deformityQuestionAnswer: boolean   = false;
 
-  constructor() {
+  constructor(private navCtrl: NavController) {
   }
 
   private nextQuestion(answer, slideNumber) {
@@ -52,5 +53,9 @@ export class QuizComponent {
       this.deformityQuestionAnswer].join(','));
 
     this.slides.slideNext();
+  }
+
+  private endOfQuiz() {
+    this.navCtrl.pop();
   }
 }

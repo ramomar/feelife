@@ -1,11 +1,16 @@
-<ion-slides autoplay="false" loop="false" pager="true" paginationType="progress">
+<ion-content class="tutorial-page">
+<ion-slides autoplay="false" loop="false" pager="true" paginationType="progress" (ionSlideReachEnd)="endOfTutorial();" pager>
 
+    <div class="imgg">
     <ion-slide>
-        <p>Párate frente a un espejo con los hombros rectos y los brazos junto a la cadera y mírate las mamas.
-        </p>
+        <img src="assets/imgs/guia1.png" class="slide-image image1"/>
+        <p>Párate frente a un espejo con los hombros rectos y los brazos junto a la cadera y mírate las mamas.</p>
     </ion-slide>
+    </div>
 
+    <div class="imgg">
     <ion-slide>
+        <img src="assets/imgs/guia2.png" class="slide-image"/>
         <p text-center>Intenta notar alguna de las siguientes irregularidades:</p>
         <p text-center>
             formación de hoyuelos, arrugas o bultos en la piel.
@@ -13,21 +18,31 @@
             enrojecimiento, dolor, sarpullido o inflamación.
         </p>
     </ion-slide>
+    </div>
 
+    <div class="imgg">
     <ion-slide>
+        <img src="assets/imgs/guia3.png" class="slide-image"/>
         <p text-center>Fíjate si sale líquido de uno o ambos pezones, si es así, anótalo en el formulario.</p>
     </ion-slide>
+    </div>
 
+    <div class="imgg">
     <ion-slide>
+        <img src="assets/imgs/guia4.png" class="slide-image"/>
         <p text-center="">Acuéstate y pálpate las mamas, la mama izquierda con la mano derecha y viceversa.
             Trata de palpar firmemente y pausado con las yemas, manteniendo los dedos rectos y juntos.
         </p>
     </ion-slide>
+    </div>
 
+    <div class="imgg">
     <ion-slide>
+        <img src="assets/imgs/guia5.png" class="slide-image"/>
         <p>
             Pálpate las mamas estando de pie o sentada, la mejor forma de hacerlo es cuando la piel está mojada y resbaladiza (en la ducha). Recorre la mama con el mismo patrón del paso anterior.
         </p>
     </ion-slide>
-
+    </div>
 </ion-slides>
+</ion-content>
