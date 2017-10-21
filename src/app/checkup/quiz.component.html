@@ -2,8 +2,8 @@
 
     <ion-slide class="mobility-slide">
         <h3 class="mobility-question">¿La masa se mueve o esta fija?</h3>
-        <button ion-button (click)="nextQuestion(true);">Se mueve</button>
-        <button ion-button (click)="nextQuestion(false);">Esta fija</button>
+        <button ion-button (click)="nextQuestion(true, 0);">Se mueve</button>
+        <button ion-button (click)="nextQuestion(false, 0);">Esta fija</button>
     </ion-slide>
 
     <ion-slide class="pain-slide">
@@ -15,33 +15,33 @@
             </ion-range>
         </ion-item>
 
-        <button ion-button (click)="nextQuestion();">Siguiente</button>
+        <button ion-button (click)="nextQuestion(null, 1);">Siguiente</button>
     </ion-slide>
 
     <ion-slide class="temperature-slide">
         <h3 class="pain-question">¿La zona en donde sientes la masa tiene una temperatura diferente?</h3>
-        <button ion-button (click)="nextQuestion(true);">Si</button>
-        <button ion-button (click)="nextQuestion(false);">No</button>
+        <button ion-button (click)="nextQuestion(true, 2);">Si</button>
+        <button ion-button (click)="nextQuestion(false, 2);">No</button>
     </ion-slide>
 
     <ion-slide class="color-slide">
         <h3 class="color-question">¿Tienes algún cambio en la coloración de la piel de tus senos?</h3>
-        <button ion-button (click)="nextQuestion(true);">Si</button>
-        <button ion-button (click)="nextQuestion(false);">No</button>
+        <button ion-button (click)="nextQuestion(true, 3);">Si</button>
+        <button ion-button (click)="nextQuestion(false, 3);">No</button>
     </ion-slide>
 
     <ion-slide class="secretion-slide">
         <h3 class="secretion-question">¿Tu pecho secreta algún fluido?</h3>
-        <button ion-button (click)="nextQuestion(red);">Rojo</button>
-        <button ion-button (click)="nextQuestion(transparent);">Transparente</button>
-        <button ion-button (click)="nextQuestion(white);">Blanco</button>
-        <button ion-button (click)="nextQuestion(no);">No</button>
+        <button ion-button (click)="nextQuestion('red', 4);">Rojo</button>
+        <button ion-button (click)="nextQuestion('transparent', 4);">Transparente</button>
+        <button ion-button (click)="nextQuestion('white', 4);">Blanco</button>
+        <button ion-button (click)="nextQuestion('no', 4);">No</button>
     </ion-slide>
 
     <ion-slide class="deformity-slide">
         <h3 class="deformity-slide">¿Sientes alguna deformidad en tu seno?</h3>
-        <button ion-button (click)="nextQuestion(true);">Si</button>
-        <button ion-button (click)="nextQuestion(false);">No</button>
+        <button ion-button (click)="nextQuestion(true, 5);">Si</button>
+        <button ion-button (click)="nextQuestion(false, 5);">No</button>
     </ion-slide>
 
 </ion-slides>

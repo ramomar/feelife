@@ -20,9 +20,9 @@ export class QuizComponent {
   constructor() {
   }
 
-  private nextQuestion(answer) {
+  private nextQuestion(answer, slideNumber) {
     if (answer) {
-      switch(this.slides.getActiveIndex()) {
+      switch(slideNumber) {
         case 0:
           this.mobilityQuestionAnswer = answer;
           break;
