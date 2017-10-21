@@ -1,0 +1,30 @@
+.logo {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.squared-button {
+  margin-right: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.squared-buttons-container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+

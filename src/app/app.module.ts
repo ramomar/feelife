@@ -7,6 +7,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { WelcomePage } from '../pages/welcome/welcome';
 
 import { QuizComponent } from './checkup/quiz.component';
 import { CheckupModule } from './checkup/checkup.module';
@@ -19,8 +20,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
     TabsPage,
+    WelcomePage,
     QuizComponent
   ],
   imports: [
@@ -33,7 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     AboutPage,
     ContactPage,
-    HomePage,
+    WelcomePage,
     TabsPage
   ],
   providers: [
