@@ -8,6 +8,9 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { CalculatorPage } from '../pages/calculator/calculator';
+import { ResultModal } from '../pages/calculator/result.modal';
+
 
 import { QuizComponent } from './checkup/quiz.component';
 import { CheckupModule } from './checkup/checkup.module';
@@ -22,6 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     TabsPage,
     WelcomePage,
+    CalculatorPage,
+    ResultModal,
     QuizComponent
   ],
   imports: [
@@ -35,6 +40,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     WelcomePage,
+    CalculatorPage,
+    ResultModal,
     TabsPage
   ],
   providers: [

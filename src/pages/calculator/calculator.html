@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Calculadora</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h3>¿Quienes de tus familiares han padecido cancer de mama?</h3>
+    <div>
+        <ion-item>
+            <ion-toggle [(ngModel)]="hasMother"></ion-toggle>
+            <ion-label>Mamá</ion-label>
+        </ion-item>
+        <ion-item *ngIf="hasMother">
+            <ion-label>Edad</ion-label>
+            <ion-select multiple="false" [(ngModel)]="motherAge">
+                <ion-option *ngFor="let age of ages" [attr.value]="age">{{ age }}</ion-option>
+            </ion-select>
+        </ion-item>
+    </div>
+
+    <div>
+        <ion-item>
+            <ion-toggle [(ngModel)]="hasSister"></ion-toggle>
+            <ion-label>Hermana</ion-label>
+        </ion-item>
+        <ion-item *ngIf="hasSister">
+            <ion-label>Edad</ion-label>
+            <ion-select multiple="false" [(ngModel)]="sisterAge">
+                <ion-option *ngFor="let age of ages" [attr.value]="age">{{ age }}</ion-option>
+            </ion-select>
+        </ion-item>
+    </div>
+
+    <div>
+        <ion-item>
+            <ion-toggle [(ngModel)]="hasDaughter"></ion-toggle>
+            <ion-label>Hija</ion-label>
+        </ion-item>
+        <ion-item *ngIf="hasDaughter">
+            <ion-label>Edad</ion-label>
+            <ion-select multiple="false" [(ngModel)]="daughterAge">
+                <ion-option *ngFor="let age of ages" [attr.value]="age">{{ age }}</ion-option>
+            </ion-select>
+        </ion-item>
+    </div>
+
+    <button ion-button full (click)="showResults();">Calcular</button>
+</ion-content>

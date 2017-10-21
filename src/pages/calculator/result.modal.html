@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Resultado</ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text>Cerrar</span>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <h3 class="header-caption" text-center>Aquí esta la probabilidad de que padezcas cancer de mama</h3>
+
+    <span class="probability">{{ results.probability }}%</span>
+
+    <div *ngIf="results.probability > 50" class="recommendation">
+        <p>Te recomendamos una visita al médico</p>
+    </div>
+
+</ion-content>
