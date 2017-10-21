@@ -10,7 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { CalculatorPage } from '../pages/calculator/calculator';
 import { ResultModal } from '../pages/calculator/result.modal';
-
+import { QuizPage } from '../pages/quiz/quiz';
+import { TutorialPage } from '../pages/tutorial/tutorial';
 
 import { QuizComponent } from './checkup/quiz.component';
 import { CheckupModule } from './checkup/checkup.module';
@@ -26,6 +27,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     WelcomePage,
     CalculatorPage,
+    QuizPage,
+    TutorialPage,
     ResultModal,
     QuizComponent
   ],
@@ -41,6 +44,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     WelcomePage,
     CalculatorPage,
+    QuizPage,
+    TutorialPage,
     ResultModal,
     TabsPage
   ],

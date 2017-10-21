@@ -4,14 +4,21 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  width: 250px;
+  height: 100px;
 }
 
 .welcome-message {
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  color: #A8287A;
+}
+
+.swiper-container-horizontal > .swiper-pagination-progress {
+  color: #7f1e5c;
 }
 
 .squared-button {
@@ -19,6 +26,8 @@
   margin-right: 20px;
   margin-bottom: 5px;
   display: inline-block;
+  width: 80px;
+  height: 80px;
 }
 
 .squared-buttons-container {
@@ -29,3 +38,6 @@
   transform: translate(-50%, -50%);
 }
 
+.bg {
+  background-color: #FDE8F1;
+}
