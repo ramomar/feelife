@@ -31,7 +31,7 @@ export class CalculatorPage {
   }
 
   showResults() {
-    let results = { probability: 60 };
+    let results = { probability: 18 };
     if (this.hasMother || this.hasSister || this.hasDaughter) {
       this.modalCtrl
         .create(ResultModal, {results: results})
