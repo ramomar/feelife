@@ -1,35 +1,93 @@
 <ion-header>
     <ion-navbar>
-        <ion-title>Cuestionario</ion-title>
+        <ion-title>Autoexploración</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
-<ion-slides autoplay="false" loop="false" pager="true" paginationType="progress" (ionSlideReachEnd)="endOfQuiz();">
+<ion-slides autoplay="false" loop="false" pager="true" paginationType="progress">
 
     <ion-slide>
         <div class="spacer"></div>
-        <h3>¿La masa se mueve o esta fija?</h3>
-        <button ion-button (click)="nextQuestion(true, 0);">Se mueve</button>
-        <button ion-button (click)="nextQuestion(false, 0);">Esta fija</button>
+        <h3>¿Te palpas alguna masa?</h3>
+        <button ion-button (click)="nextQuestion(true, 'mass');">Si</button>
+        <button ion-button (click)="nextQuestion(false, 'mass');">No</button>
     </ion-slide>
 
-
-    <!--<ion-slide>
+    <ion-slide margin-top *ngIf="massQuestionAnswer">
+        <div class="breast-marker">
         <img src="assets/imgs/marker.png"/>
-        <ion-select>
-            <ion-option>Izquierda</ion-option>
-            <ion-option>Derecha</ion-option>
-        </ion-select>
+        </div>
 
-        <ion-select>
-            <ion-option></ion-option>
-        </ion-select>
-    </ion-slide>-->
+        <h3 class="breast-question">¿En donde presentas anormalidades?</h3>
+
+        <ion-grid>
+            <ion-col>
+                <ion-item>
+                    <ion-label>Mama</ion-label>
+                    <ion-select [(ngModel)]="affectedBreast" >
+                        <ion-option value="left">Izquierda</ion-option>
+                        <ion-option value="right">Derecha</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Ángulo</ion-label>
+                    <ion-select [(ngModel)]="angle">
+                        <ion-option value="1">1</ion-option>
+                        <ion-option value="2">2</ion-option>
+                        <ion-option value="3">3</ion-option>
+                        <ion-option value="4">4</ion-option>
+                        <ion-option value="5">5</ion-option>
+                        <ion-option value="6">6</ion-option>
+                        <ion-option value="7">7</ion-option>
+                        <ion-option value="8">8</ion-option>
+                        <ion-option value="9">9</ion-option>
+                        <ion-option value="10">10</ion-option>
+                        <ion-option value="11">11</ion-option>
+                        <ion-option value="12">12</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Zona</ion-label>
+                    <ion-select [(ngModel)]="zone">
+                        <ion-option value="A">A</ion-option>
+                        <ion-option value="B">B</ion-option>
+                        <ion-option value="C">C</ion-option>
+                        <ion-option value="R">R</ion-option>
+                    </ion-select>
+                </ion-item>
+                <button ion-button block (click)="nextQuestion(null, 'breastMarker')">Siguiente</button>
+            </ion-col>
+        </ion-grid>
+
+    </ion-slide>
+
+    <ion-slide *ngIf="massQuestionAnswer">
+        <div class="spacer"></div>
+        <h3>¿La masa se mueve o está fija?</h3>
+        <button ion-button (click)="nextQuestion(true, 'mobility');">Se mueve</button>
+        <button ion-button (click)="nextQuestion(false, 'mobility');">Está fija</button>
+    </ion-slide>
+
+    <ion-slide *ngIf="massQuestionAnswer">
+        <div class="spacer"></div>
+        <h3>¿La zona en donde sientes la masa tiene una temperatura diferente?</h3>
+        <button ion-button (click)="nextQuestion(true, 'temperature');">Si</button>
+        <button ion-button (click)="nextQuestion(false, 'temperature');">No</button>
+    </ion-slide>
 
     <ion-slide>
         <div class="spacer"></div>
-        <h3>¿Cuanto dolor sientes?</h3>
+        <h3>¿Tu pezón secreta algún fluido?</h3>
+        <button ion-button (click)="nextQuestion('red', 'secretion');">Rojo</button>
+        <button ion-button (click)="nextQuestion('transparent', 'secretion');">Transparente</button>
+        <button ion-button (click)="nextQuestion('white', 'secretion');">Blanco</button>
+        <button ion-button (click)="nextQuestion('no', 'secretion');">No</button>
+    </ion-slide>
+
+    <ion-slide>
+        <div class="spacer"></div>
+        <h3>Del 0 al 10, ¿cuanto dolor sientes?</h3>
         <ion-item>
             <ion-range min="0" max="10" step="1" snaps="true" pin="true" [(ngModel)]="painQuestionAnswer">
                 <ion-icon range-left small name="md-happy"></ion-icon>
@@ -37,37 +95,20 @@
             </ion-range>
         </ion-item>
 
-        <button ion-button (click)="nextQuestion(null, 1);">Siguiente</button>
-    </ion-slide>
-
-    <ion-slide>
-        <div class="spacer"></div>
-        <h3>¿La zona en donde sientes la masa tiene una temperatura diferente?</h3>
-        <button ion-button (click)="nextQuestion(true, 2);">Si</button>
-        <button ion-button (click)="nextQuestion(false, 2);">No</button>
+        <button ion-button (click)="nextQuestion(null, 'pain');">Siguiente</button>
     </ion-slide>
 
     <ion-slide>
         <div class="spacer"></div>
         <h3>¿Tienes algún cambio en la coloración de la piel de tus senos?</h3>
-        <button ion-button (click)="nextQuestion(true, 3);">Si</button>
-        <button ion-button (click)="nextQuestion(false, 3);">No</button>
+        <button ion-button (click)="nextQuestion(true, 'color');">Si</button>
+        <button ion-button (click)="nextQuestion(false, 'color');">No</button>
     </ion-slide>
 
     <ion-slide>
         <div class="spacer"></div>
-        <h3>¿Tu pecho secreta algún fluido?</h3>
-        <button ion-button (click)="nextQuestion('red', 4);">Rojo</button>
-        <button ion-button (click)="nextQuestion('transparent', 4);">Transparente</button>
-        <button ion-button (click)="nextQuestion('white', 4);">Blanco</button>
-        <button ion-button (click)="nextQuestion('no', 4);">No</button>
-    </ion-slide>
-
-    <ion-slide>
-        <div class="spacer"></div>
-        <h3>¿Sientes alguna deformidad en tu seno?</h3>
-        <button ion-button (click)="nextQuestion(true, 5);">Si</button>
-        <button ion-button (click)="nextQuestion(false, 5);">No</button>
+        <h3>Es todo, no dejes de revisarte</h3>
+        <button ion-button (click)="endOfQuiz();">Finalizar</button>
     </ion-slide>
 
 </ion-slides>
