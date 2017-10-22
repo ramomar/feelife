@@ -14,7 +14,8 @@ import { ResultModal } from '../pages/calculator/result.modal';
 import { QuizPage } from '../pages/quiz/quiz';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { TamPage } from '../pages/tam/tam';
-import {StudiesPage} from "../pages/studies/studies";
+import { StudiesPage } from "../pages/studies/studies";
+import { InfoPage } from "../pages/info/info";
 
 import { QuizComponent } from './checkup/quiz.component';
 import { CheckupModule } from './checkup/checkup.module';
@@ -35,6 +36,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TamPage,
     StudiesPage,
     ResultModal,
+    InfoPage,
     QuizComponent
   ],
   imports: [
@@ -54,6 +56,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TamPage,
     StudiesPage,
     ResultModal,
+    InfoPage,
     TabsPage
   ],
   providers: [
