@@ -7,11 +7,14 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+
 import { WelcomePage } from '../pages/welcome/welcome';
 import { CalculatorPage } from '../pages/calculator/calculator';
 import { ResultModal } from '../pages/calculator/result.modal';
 import { QuizPage } from '../pages/quiz/quiz';
 import { TutorialPage } from '../pages/tutorial/tutorial';
+import { TamPage } from '../pages/tam/tam';
+import {StudiesPage} from "../pages/studies/studies";
 
 import { QuizComponent } from './checkup/quiz.component';
 import { CheckupModule } from './checkup/checkup.module';
@@ -29,6 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CalculatorPage,
     QuizPage,
     TutorialPage,
+    TamPage,
+    StudiesPage,
     ResultModal,
     QuizComponent
   ],
@@ -46,6 +51,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CalculatorPage,
     QuizPage,
     TutorialPage,
+    TamPage,
+    StudiesPage,
     ResultModal,
     TabsPage
   ],
