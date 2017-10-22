@@ -1,5 +1,11 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Tutorial</ion-title>
+    </ion-navbar>
+</ion-header>
+
 <ion-content class="tutorial-page">
-<ion-slides autoplay="false" loop="false" pager="true" paginationType="progress" (ionSlideReachEnd)="endOfTutorial();" pager>
+<ion-slides autoplay="false" loop="false" pager="true" paginationType="progress" pager>
 
     <div class="imgg">
     <ion-slide>
@@ -42,6 +48,8 @@
         <p>
             Pálpate las mamas estando de pie o sentada, la mejor forma de hacerlo es cuando la piel está mojada y resbaladiza (en la ducha). Recorre la mama con el mismo patrón del paso anterior.
         </p>
+
+        <button ion-button clear [navPush]="quizPage">Comenzar</button>
     </ion-slide>
     </div>
 </ion-slides>

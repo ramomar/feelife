@@ -56,6 +56,6 @@ export class QuizComponent {
   }
 
   private endOfQuiz() {
-    this.navCtrl.pop();
+    this.navCtrl.popToRoot();
   }
 }

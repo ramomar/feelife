@@ -8,7 +8,11 @@ import { QuizPage } from '../quiz/quiz';
   templateUrl: 'tutorial.html'
 })
 export class TutorialPage {
+
+  quizPage: any;
+
   constructor(private navCtrl: NavController) {
+    this.quizPage = QuizPage;
   }
 
   private endOfTutorial() {
