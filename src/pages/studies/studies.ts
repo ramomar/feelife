@@ -10,4 +10,7 @@ export class StudiesPage {
   constructor(public navCtrl: NavController) {
   }
 
+  endOfStudies() {
+    this.navCtrl.pop();
+  }
 }
