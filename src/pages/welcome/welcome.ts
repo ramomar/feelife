@@ -6,6 +6,7 @@ import { QuizPage } from '../quiz/quiz';
 import { TutorialPage } from '../tutorial/tutorial';
 import { TamPage } from '../tam/tam';
 import { InfoPage } from '../info/info';
+import { ObservationsPage } from '../observations/observations';
 
 @Component({
   selector: 'page-welcome',
@@ -18,13 +19,15 @@ export class WelcomePage {
   tutorialPage: any;
   tamPage: any;
   infoPage: any;
+  observationsPage: any;
 
   constructor(public navCtrl: NavController) {
-    this.calculatorPage = CalculatorPage;
-    this.quizPage       = QuizPage;
-    this.tutorialPage   = TutorialPage;
-    this.tamPage        = TamPage;
-    this.infoPage       = InfoPage;
+    this.calculatorPage   = CalculatorPage;
+    this.quizPage         = QuizPage;
+    this.tutorialPage     = TutorialPage;
+    this.tamPage          = TamPage;
+    this.infoPage         = InfoPage;
+    this.observationsPage = ObservationsPage;
   }
 
 }

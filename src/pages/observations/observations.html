@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Observaciones</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-group>
+        <ion-list>
+            <button ion-item *ngFor="let observation of observations" (click)="viewObservation(observation)">
+                Observación {{ observation.date }}
+            </button>
+        </ion-list>
+    </ion-item-group>
+</ion-content>

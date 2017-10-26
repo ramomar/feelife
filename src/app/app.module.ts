@@ -14,14 +14,22 @@ import { ResultModal } from '../pages/calculator/result.modal';
 import { QuizPage } from '../pages/quiz/quiz';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { TamPage } from '../pages/tam/tam';
-import { StudiesPage } from "../pages/studies/studies";
-import { InfoPage } from "../pages/info/info";
+import { StudiesPage } from '../pages/studies/studies';
+import { InfoPage } from '../pages/info/info';
+import { ObservationsPage } from '../pages/observations/observations';
+
+import { ObservationModal } from '../pages/observations/observation.modal';
 
 import { QuizComponent } from './checkup/quiz.component';
 import { CheckupModule } from './checkup/checkup.module';
+import { HttpModule } from '@angular/http';
+
+
+import { ObservationsService } from './observations.service';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -37,12 +45,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StudiesPage,
     ResultModal,
     InfoPage,
+    ObservationsPage,
+    ObservationModal,
     QuizComponent
   ],
   imports: [
     BrowserModule,
     CheckupModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,11 +69,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StudiesPage,
     ResultModal,
     InfoPage,
+    ObservationsPage,
+    ObservationModal,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    ObservationsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]

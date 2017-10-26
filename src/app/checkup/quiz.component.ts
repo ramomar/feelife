@@ -3,10 +3,13 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Slides }        from 'ionic-angular';
 
+import { ObservationsService } from '../observations.service';
+
+import * as moment from 'moment';
+
 @Component({
   selector: 'quiz',
-  templateUrl: './quiz.component.html',
-  //styleUrls: ['./quiz.component.css']
+  templateUrl: './quiz.component.html'
 })
 export class QuizComponent {
   @ViewChild(Slides) slides: Slides;
@@ -21,7 +24,8 @@ export class QuizComponent {
   colorQuestionAnswer: boolean       = false;
   secretionQuestionAnswer: string    = 'no'; // [red,white,transparent]
 
-  constructor(private navCtrl: NavController) {
+  constructor(private navCtrl: NavController,
+              private observationsService: ObservationsService) {
   }
 
   private nextQuestion(answer, question) {
@@ -58,18 +62,20 @@ export class QuizComponent {
   }
 
   private serializeQuiz() {
-    let answers = {
-      'mass':           this.mobilityQuestionAnswer,
-      'mobility':       this.mobilityQuestionAnswer,
-      'affectedBreast': this.affectedBreast,
-      'angle':          this.angle,
-      'zone':           this.zone,
-      'pain':           this.painQuestionAnswer,
-      'temperature':    this.temperatureQuestionAnswer,
-      'color':          this.colorQuestionAnswer,
-      'secretion':      this.secretionQuestionAnswer
+    let observation = {
+      mass:           this.massQuestionAnswer,
+      mobility:       this.mobilityQuestionAnswer,
+      affectedBreast: this.affectedBreast,
+      angle:          this.angle,
+      zone:           this.zone,
+      pain:           this.painQuestionAnswer,
+      temperature:    this.temperatureQuestionAnswer,
+      color:          this.colorQuestionAnswer,
+      secretion:      this.secretionQuestionAnswer,
+      date:           moment().format('dddd, MMMM DD YYYY')
     };
 
-    console.log(answers);
+    this.observationsService.save(observation);
+    console.log(observation);
   }
 }
