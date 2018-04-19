@@ -1,26 +1,25 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+Feelife
+======
 
-## How to use this template
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/10622989/38964120-c1b98dc6-433a-11e8-93a4-bc9c4ea4b250.gif">
+</p>
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Description
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+Feelife is a breast cancer prevention checkup tracker/awareness Android app developed for the Tec Salud - IBM 2017 Healthathon using Ionic 2.
 
-### With the Ionic CLI:
+You can see more UI gifs [here](https://github.com/ramomar/feelife/issues/1).
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+## Dependencies
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
-```
+You can install dependencies with `npm install`
 
-Then, to run it, cd into `myTabs` and run:
+## Running
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+You can run the app using `ionic serve`
 
-Substitute ios for android if not on a Mac.
+## Deploying
+
+You can deploy the app locally using `ionic cordova run android`
 
