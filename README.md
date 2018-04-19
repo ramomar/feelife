@@ -7,7 +7,7 @@ Feelife
 
 ## Description
 
-Feelife is a breast cancer prevention checkup tracker/awareness Android app developed for the Tec Salud - IBM 2017 Healthathon using Ionic 2.
+Feelife is a breast cancer prevention/awareness Android app developed for the Tec Salud - IBM 2017 Healthathon using Ionic 2.
 
 I did programming while my teammates prepared illustrations, content, and pitch slides.
 
