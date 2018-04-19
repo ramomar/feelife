@@ -30,5 +30,5 @@ You can run the app using `ionic serve`.
 
 ## Deploying
 
-You can deploy the app locally using `ionic cordova run android`.
+You can deploy the app to an Android device using `ionic cordova run android`.
 
