@@ -9,7 +9,7 @@ Feelife
 
 Feelife is a breast cancer prevention/awareness Android app developed for the Tec Salud - IBM 2017 Healthathon using Ionic 2.
 
-Our team name was _Tamoxifenos_ (from _Tamoxifeno_, a drug to treat breast cancer). ~~I belive we had the coolest team name 😛~~
+Our team name was _Tamoxifenos_ (from _Tamoxifeno_, a drug used to treat breast cancer). ~~I belive we had the coolest team name 😛~~
 
 I did programming while my teammates prepared illustrations, content, and pitch slides.
 
