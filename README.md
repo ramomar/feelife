@@ -24,13 +24,13 @@ All UI gifs are [here](https://github.com/ramomar/feelife/issues/1).
 
 ## Dependencies
 
-You can install dependencies with `npm install`.
+You can install dependencies typing `npm install`.
 
 ## Running
 
-You can run the app using `ionic serve`.
+You can run the app typing `ionic serve`.
 
 ## Deploying
 
-You can deploy the app to an Android device using `ionic cordova run android`.
+You can deploy the app to an Android device typing `ionic cordova run android`.
 
