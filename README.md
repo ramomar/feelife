@@ -33,4 +33,3 @@ You can run the app typing `ionic serve`.
 ## Deploying
 
 You can deploy the app to an Android device typing `ionic cordova run android`.
-
