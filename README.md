@@ -11,7 +11,7 @@ Feelife is a breast cancer prevention/awareness Android app developed for the Te
 
 Our team name was _Tamoxifenos_ (from _Tamoxifeno_, a drug used to treat breast cancer). ~~I belive we had the coolest team name 😛~~
 
-I did programming (everything is hardcoded 🙄) while my teammates prepared illustrations, content, and pitch slides.
+I did programming (everything is hardcoded and ugly 🙄) while my teammates prepared illustrations, content, and pitch slides.
 
 Features:
 - [Breast checkup tutorial](https://user-images.githubusercontent.com/10622989/38964120-c1b98dc6-433a-11e8-93a4-bc9c4ea4b250.gif).
